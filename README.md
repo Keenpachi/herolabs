@@ -10,12 +10,22 @@ Put - update scheduler:
 
 `refresh_period` - integer value in minutes
 
+# install and run
+```
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
 # Run examples
 get
 ```
-http://127.0.0.1:8000/parking/534013
+curl -X 'GET' \
+  'http://127.0.0.1:8000/parking/534013' \
+  -H 'accept: application/json'
 ```
 put
 ```
-http://127.0.0.1:8000/crawl/534013/1
+curl -X 'PUT' \
+  'http://127.0.0.1:8000/crawl/534013/3' \
+  -H 'accept: application/json'
 ```
